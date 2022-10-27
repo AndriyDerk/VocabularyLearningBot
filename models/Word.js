@@ -9,10 +9,13 @@ const schema = new db.Schema({
         type: String,
         required: true
     },
+    captionName: {
+        type: String,
+        required: true,
+    },
     chatId: {
         type: String,
         required: true,
-        unique: true
     }
 })
 
