@@ -37,7 +37,7 @@ bot.command('start',async ctx => {
 })
 
 bot.action('Wmap', async ctx =>{
-    ctx.deleteMessage();
+    ctx.deleteMessage().catch(err => {console.log(`can't be deleted`)});
     await User.updateOne({chatId: ctx.chat.id}, {page: 0})
     const user = await User.findOne({chatId: ctx.chat.id})
     if(!user){
@@ -71,7 +71,7 @@ bot.action('Wmap', async ctx =>{
 })
 
 bot.action('Mvocabulary',  async ctx =>{
-    ctx.deleteMessage();
+    ctx.deleteMessage().catch(err => {console.log(`can't be deleted`)});
     await User.updateOne({chatId: ctx.chat.id}, {page: 0})
     const user = await User.findOne({chatId: ctx.chat.id})
     if(!user){
@@ -108,7 +108,7 @@ bot.action('Mvocabulary',  async ctx =>{
 })
 
 bot.action('Menu', async ctx=>{
-    ctx.deleteMessage();
+    ctx.deleteMessage().catch(err => {console.log(`can't be deleted`)});
 
     const user = await User.findOne({chatId: ctx.chat.id})
     if(!user){
@@ -135,7 +135,7 @@ bot.action('Menu', async ctx=>{
 })
 
 bot.action('Info', async ctx => {
-    ctx.deleteMessage();
+    ctx.deleteMessage().catch(err => {console.log(`can't be deleted`)});
 
     const user = await User.findOne({chatId: ctx.chat.id})
     if(!user){
@@ -156,7 +156,7 @@ bot.action('Info', async ctx => {
 })
 
 bot.action('Wmap<', async ctx => {
-    ctx.deleteMessage();
+    ctx.deleteMessage().catch(err => {console.log(`can't be deleted`)});
 
     const user = await User.findOne({chatId: ctx.chat.id})
     if(!user){
@@ -194,7 +194,7 @@ bot.action('Wmap<', async ctx => {
 })
 
 bot.action('Wmap>', async ctx => {
-    ctx.deleteMessage();
+    ctx.deleteMessage().catch(err => {console.log(`can't be deleted`)});
 
     const user = await User.findOne({chatId: ctx.chat.id})
     if(!user){
@@ -229,7 +229,7 @@ bot.action('Wmap>', async ctx => {
 })
 
 bot.action('Mvocabulary<', async ctx => {
-    ctx.deleteMessage();
+    ctx.deleteMessage().catch(err => {console.log(`can't be deleted`)});
 
     const user = await User.findOne({chatId: ctx.chat.id})
     if(!user){
@@ -269,7 +269,7 @@ bot.action('Mvocabulary<', async ctx => {
 })
 
 bot.action('Mvocabulary>', async ctx => {
-    ctx.deleteMessage();
+    ctx.deleteMessage().catch(err => {console.log(`can't be deleted`)});
 
     const user = await User.findOne({chatId: ctx.chat.id})
     if(!user){
@@ -308,7 +308,7 @@ bot.action('Mvocabulary>', async ctx => {
 })
 
 bot.action('Mvocabularyadd', async ctx => {
-    ctx.deleteMessage();
+    ctx.deleteMessage().catch(err => {console.log(`can't be deleted`)});
 
     const user = await User.findOne({chatId: ctx.chat.id})
     if(!user){
