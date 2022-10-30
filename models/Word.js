@@ -3,9 +3,10 @@ const db = require('../ext/db')
 const schema = new db.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
-    translation:{
+        translation:{
         type: String,
         required: true
     },

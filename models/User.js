@@ -10,6 +10,14 @@ const schema = new db.Schema({
         type: Number,
         default: 0
     },
+    lastWord:{
+        type: String,
+        default: ''
+    },
+    enteredCaption:{
+        type: String,
+        default: ''
+    },
     lastCallBack:{
         type: String,
         default: "Menu"
